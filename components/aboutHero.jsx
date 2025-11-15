@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import TextType from './textType';
+import TextType from './TextType';
 import Image from 'next/image';
 import imge from './../public/about page photo (2).png'
 
@@ -65,3 +65,4 @@ export default function AboutHero() {
     </section>
   )
 }
+
