@@ -23,19 +23,16 @@ import { FaPencilRuler,FaCode,FaDatabase, FaHtml5, FaReact, } from 'react-icons/
 
 export default function ToolSection() {
     const sections = [
-        {
-            id: 'graphic',
-            Icon: FaPencilRuler ,
-            title: 'Graphic Design',
-            items: [{ name: 'Adobe Photoshop', icon: SiAdobephotoshop },
-                { name: 'Adobe Illustrator', icon: SiAdobeillustrator },
-                {name:"Adobe InDesign", icon: SiAdobeindesign }]
-        },
+      
         {
             id: 'uiux',
             Icon: FaPencilRuler,
             title: 'UI / UX Design',
-            items: [{name:'Figma',icon:SiFigma}, {name:'Sketch',icon:SiSketch}, {name:'Adobe XD',icon:SiAdobexd}, {name:'Miro',icon:SiMiro}]
+            items: [
+                { name: 'Adobe Photoshop', icon: SiAdobephotoshop },
+                { name: 'Adobe Illustrator', icon: SiAdobeillustrator },
+                {name:"Adobe InDesign", icon: SiAdobeindesign },
+                {name:'Figma',icon:SiFigma}, {name:'Sketch',icon:SiSketch}, {name:'Adobe XD',icon:SiAdobexd}, {name:'Miro',icon:SiMiro}]
         },
         {
             id: 'frontdev',
