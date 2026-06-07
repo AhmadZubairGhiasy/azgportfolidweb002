@@ -4,10 +4,8 @@ import React from 'react'
 import {motion} from 'framer-motion'
 
 import {
-    SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobexd, SiFigma
+    SiAdobexd, SiFigma
     ,SiNodedotjs,
-    SiSketch,
-    SiMiro,
     SiNextdotjs,
     SiTailwindcss,
     SiExpress,
@@ -17,6 +15,8 @@ import {
     SiSqlite,
     SiMongodb
 } from "react-icons/si"
+
+import { TbBrandAdobeXd,TbBrandAdobePhotoshop,TbBrandAdobeIllustrator } from "react-icons/tb";
 
 import { FaPencilRuler,FaCode,FaDatabase, FaHtml5, FaReact, } from 'react-icons/fa';
 
@@ -29,9 +29,9 @@ export default function ToolSection() {
             Icon: FaPencilRuler,
             title: 'UI / UX Design',
             items: [
-                { name: 'Adobe Photoshop', icon: SiAdobephotoshop },
-                { name: 'Adobe Illustrator', icon: SiAdobeillustrator },
-                {name:'Figma',icon:SiFigma}, {name:'Adobe XD',icon:SiAdobexd}]
+                { name: 'Adobe Photoshop', icon: TbBrandAdobePhotoshop },
+                { name: 'Adobe Illustrator', icon: TbBrandAdobeIllustrator },
+                {name:'Figma',icon:SiFigma}, {name:'Adobe XD',icon:TbBrandAdobeXd}]
         },
         {
             id: 'frontdev',
