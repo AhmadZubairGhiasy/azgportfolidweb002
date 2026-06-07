@@ -74,42 +74,37 @@ export default function ToolSection() {
                 </motion.h1>
 
 
-                <div className='w-full flex flex-wrap mt-10 flex  gap-8 ' >
-                    {sections.map((s,index) =>
-                        <>
-                            <motion.div
-                                className='w-70 h-60 rounded flex box-border bg-zinc-800 items-center justify-center flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300 '
-                                key={s.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1, delay: 0.2+index*0.2 }}
-                                viewport={{ once: false }}
-                            >
-                                <div className='w-65 h-50 rounded flex box-border bg-zinc-800 items-center justify-start flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300 ' key={s.id} >
-                                <div className='flex flex-row'><s.Icon size={20} color='#00ccffff' />
-                                <h2 className='px-4 capitalize'>{s.title}</h2></div>
-                                
+                <div className='w-full flex-wrap mt-10 flex gap-8 ' >
+                    {sections.map((s, index) => (
+                        <motion.div
+                            className='w-70 h-60 rounded flex box-border bg-zinc-800 items-center justify-center flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300 '
+                            key={s.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                            viewport={{ once: false }}
+                        >
+                            <div className='w-65 h-50 rounded flex box-border bg-zinc-800 items-center justify-start flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300'>
+                                <div className='flex flex-row'>
+                                    <s.Icon size={20} color='#00ccffff' />
+                                    <h2 className='px-4 capitalize'>{s.title}</h2>
+                                </div>
+
                                 <div className='w-full'>
-                                    {s.items.map((t) =>
-                                        <>
-                                            <div className='flex flex-row my-2'>
-                                                <t.icon size={20} color='#888888'/>
+                                    {s.items.map((t, idx) => {
+                                        const ItemIcon = t.icon;
+                                        return (
+                                            <div className='flex flex-row my-2' key={t.name ?? idx}>
+                                                {ItemIcon ? <ItemIcon size={20} color='#888888' /> : null}
                                                 <p className='text-gray-400 px-4 capitalize'>{t.name}</p>
                                             </div>
-                                        </>)
-                                    }
+                                        );
+                                    })}
 
                                 </div>
                             </div>
-                                </motion.div>
-                        
-                        </>
-                    
-                    )
-                    
-                    
-                    }
-                    
+                        </motion.div>
+                    ))}
                 </div>
                 
             </section>

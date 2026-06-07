@@ -53,32 +53,26 @@ export default function ProjectSection() {
 
 
                 <div className='w-full flex flex-wrap mt-10 flex  gap-8 ' >
-                    {sections.map((s,index) =>
-                        <>
-                            <motion.div
-                                className='w-70 h-40 rounded flex box-border bg-zinc-800 items-center justify-center flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300 '
-                                key={s.id}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ duration: 1, delay: 0.2+index*0.2 }}
-                                viewport={{ once: false }}
-                            >
-                                <div className='w-65 h-50 rounded flex box-border bg-zinc-800 items-center justify-start flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300 ' key={s.id} >
-                                <div className='flex flex-row'><s.Icon size={20} color='#00ccffff' />
-                                <h2 className='px-4 capitalize'>{s.title}</h2></div>
+                    {sections.map((s, index) => (
+                        <motion.div
+                            className='w-70 h-40 rounded flex box-border bg-zinc-800 items-center justify-center flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300 '
+                            key={s.id}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                            viewport={{ once: false }}
+                        >
+                            <div className='w-65 h-50 rounded flex box-border bg-zinc-800 items-center justify-start flex-col p-4 gap-4 hover:scale-105 transition-transform duration-300'>
+                                <div className='flex flex-row'>
+                                    <s.Icon size={20} color='#00ccffff' />
+                                    <h2 className='px-4 capitalize'>{s.title}</h2>
+                                </div>
 
                                 <a href={s.url} className=' px-4 py-2 capitalize rounded-xl bg-blue-500'>visit projects</a>
 
                             </div>
-                                </motion.div>
-                        
-                        </>
-                    
-                    )
-                    
-                    
-                    }
-                    
+                        </motion.div>
+                    ))}
                 </div>
                 
             </section>

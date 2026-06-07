@@ -35,21 +35,22 @@ export default function ContactSection() {
           
           <div className='w-full flex flex-row mt-10 gap-8 items-center justify-center flex-wrap ' >
               
-              {contacts.map((c, index) => <>
-                  <motion.a
-                      className='hover:scale-110 transition-transform duration-300 '
-                      href={c.link}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
-                      viewport={{ once: false }}
-                  >
-                     
-                      
-                      <c.icon size={30} color='#ffffffff' />
-                                           
-                    </motion.a>
-              </>)}
+              {contacts.map((c, index) => {
+                  const Icon = c.icon;
+                  return (
+                      <motion.a
+                          key={c.link ?? index}
+                          className='hover:scale-110 transition-transform duration-300 '
+                          href={c.link}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                          viewport={{ once: false }}
+                      >
+                          {Icon ? <Icon size={30} color='#ffffffff' /> : null}
+                      </motion.a>
+                  );
+              })}
 
         </div>
 

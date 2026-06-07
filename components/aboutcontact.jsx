@@ -40,12 +40,15 @@ export default function AboutContact() {
                   <div className='mt-10'>
                       
                       {
-                          contact.map((c) => <>
-                              <div className='flex flex-row items-center my-4'>
-                                  <c.icon size={20} color='#006effff' />
-                                    <p className='px-4 text-gray-400'>{c.detail}</p>
-                                </div>
-                          </>)
+                          contact.map((c, idx) => {
+                              const Icon = c.icon;
+                              return (
+                                  <div className='flex flex-row items-center my-4' key={c.detail ?? c.method ?? idx}>
+                                      {Icon ? <Icon size={20} color='#006effff' /> : null}
+                                      <p className='px-4 text-gray-400'>{c.detail}</p>
+                                  </div>
+                              );
+                          })
                       }
 
                     </div>
@@ -65,19 +68,22 @@ export default function AboutContact() {
                   
                   <div className='flex w-full flex-wrap my-8'>
                       {
-                          socials.map((s,index) => <>
-                              <motion.a
-                                  className='hover:scale-110 transition-transform duration-300 m-4 '
-                      href={s.url}
-                      initial={{ opacity: 0}}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
-                      viewport={{ once: false }}
+                          socials.map((s, index) => {
+                              const Icon = s.icon;
+                              return (
+                                  <motion.a
+                                      key={s.url ?? s.platform ?? index}
+                                      className='hover:scale-110 transition-transform duration-300 m-4 '
+                                      href={s.url}
+                                      initial={{ opacity: 0 }}
+                                      whileInView={{ opacity: 1 }}
+                                      transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                                      viewport={{ once: false }}
                                   >
-                                
-                                  <s.icon size={30} color='#ffffffff' />
+                                      {Icon ? <Icon size={30} color='#ffffffff' /> : null}
                                   </motion.a>
-                          </>)}
+                              );
+                          })}
                   </div>
               </motion.div>
           
