@@ -31,14 +31,18 @@ export default function ToolSection() {
             items: [
                 { name: 'Adobe Photoshop', icon: SiAdobephotoshop },
                 { name: 'Adobe Illustrator', icon: SiAdobeillustrator },
-                {name:"Adobe InDesign", icon: SiAdobeindesign },
-                {name:'Figma',icon:SiFigma}, {name:'Sketch',icon:SiSketch}, {name:'Adobe XD',icon:SiAdobexd}, {name:'Miro',icon:SiMiro}]
+                {name:'Figma',icon:SiFigma}, {name:'Sketch',icon:SiSketch}, 
+                {name:'Adobe XD',icon:SiAdobexd}, {name:'Miro',icon:SiMiro}]
         },
         {
             id: 'frontdev',
             Icon: FaCode,
             title: 'Frontend Development',
-            items: [{name:'html/css',icon:FaHtml5},{name:'React',icon:FaReact}, {name:'Next.js',icon:SiNextdotjs}, {name:'Tailwind CSS',icon:SiTailwindcss}],
+            items: [{name:'html/css',icon:FaHtml5},
+                    {name:'React',icon:FaReact}, 
+                    {name:'ReactNative',icon:FaReact}, 
+                    {name:'Next.js',icon:SiNextdotjs},
+                    {name:'Tailwind CSS',icon:SiTailwindcss}],
         },
          {
             id: 'backdev',
