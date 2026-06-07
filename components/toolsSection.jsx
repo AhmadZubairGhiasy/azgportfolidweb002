@@ -4,7 +4,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 
 import {
-    SiAdobexd, SiFigma
+    SiLaravel, SiFigma
     ,SiNodedotjs,
     SiNextdotjs,
     SiTailwindcss,
@@ -13,9 +13,11 @@ import {
     SiMysql,
     SiPostgresql,
     SiSqlite,
-    SiMongodb
+    SiMongodb,
+    SiDocker,SiKubernetes,SiGithub,SiGithubactions,
 } from "react-icons/si"
 
+import { FaServer } from "react-icons/fa";
 import { TbBrandAdobeXd,TbBrandAdobePhotoshop,TbBrandAdobeIllustrator } from "react-icons/tb";
 
 import { FaPencilRuler,FaCode,FaDatabase, FaHtml5, FaReact, } from 'react-icons/fa';
@@ -47,13 +49,20 @@ export default function ToolSection() {
             id: 'backdev',
             Icon: FaCode,
             title: 'backend Development',
-            items: [{name:'nodejs',icon:SiNodedotjs}, {name:'expressjs',icon:SiExpress},{name:'django',icon:SiDjango}]
+            items: [{name:'nodejs',icon:SiNodedotjs}, {name:'expressjs',icon:SiExpress},{name:'django',icon:SiDjango},{name:'laravel',icon:SiLaravel}]
         },
        {
             id: 'database',
             Icon: FaDatabase,
             title: 'Database Management',
             items: [{name:'my SQL',icon:SiMysql}, {name:'Postgres SQL',icon:SiPostgresql},{name:'SQLite',icon:SiSqlite},{name:'mongodb',icon:SiMongodb}]
+        }
+        ,
+       {
+            id: 'devops',
+            Icon: FaServer,
+            title: 'devops tools',
+            items: [{name:'github',icon:SiGithub}, {name:'docker',icon:SiDocker},{name:'kubernetes',icon:SiKubernetes},{name:'github actions',icon:SiGithubactions}]
         }
          
     ]
