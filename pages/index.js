@@ -30,7 +30,6 @@ export default function Home() {
         <title>Ahmad Zubair Ghiasi</title>
         <meta name="description" content="AZG Portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="" />
       </Head>
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
