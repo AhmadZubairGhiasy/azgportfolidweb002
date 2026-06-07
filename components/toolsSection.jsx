@@ -31,7 +31,7 @@ export default function ToolSection() {
             items: [
                 { name: 'Adobe Photoshop', icon: SiAdobephotoshop },
                 { name: 'Adobe Illustrator', icon: SiAdobeillustrator },
-                {name:'Figma',icon:SiFigma}, {name:'Adobe XD',icon:SiAdobexd}
+                {name:'Figma',icon:SiFigma}, {name:'Adobe XD',icon:SiAdobexd}]
         },
         {
             id: 'frontdev',
