@@ -57,7 +57,7 @@ export default function HeroSection() {
                       
                       <span className='font-light text-blue-500 uppercase text-5xl '>
                            <TextType 
-                            text={["graphic designer", "ui/ux designer", "frontend developer", "node js developer"]}
+                            text={["ui/ux designer", "frontend developer", "node js developer"]}
                             typingSpeed={75}
                             pauseDuration={1500}
                             showCursor={false}
