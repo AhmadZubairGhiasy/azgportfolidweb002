@@ -9,12 +9,7 @@ import { FaPencilRuler,FaCode,FaDatabase, FaHtml5, FaReact, } from 'react-icons/
 
 export default function ProjectSection() {
     const sections = [
-        {
-            id: 'graphic',
-            Icon: FaPencilRuler ,
-            title: 'Graphic Design projects',
-            url:'https://www.behance.net/ahmadzghiasy1'
-        },
+      
         {
             id: 'uiux',
             Icon: FaPencilRuler,
